@@ -11,9 +11,11 @@ export interface BatchTranslationRequest {
 }
 
 export interface TranslationResponse {
-  source: string;
-  translation: string;
-  model: string;
+  original_text: string;
+  translated_text: string;
+  source_language: string;
+  target_language: string;
+  success: boolean;
 }
 
 export interface BatchTranslationResponse {

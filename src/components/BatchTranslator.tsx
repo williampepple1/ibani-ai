@@ -47,7 +47,7 @@ const BatchTranslator: React.FC<BatchTranslatorProps> = ({ onTranslationComplete
     if (!translations) return;
 
     const csvContent = translations.translations
-      .map((t) => `"${t.source}","${t.translation}"`)
+      .map((t) => `"${t.original_text}","${t.translated_text}"`)
       .join('\n');
 
     const blob = new Blob([`"English","Ibani"\n${csvContent}`], { type: 'text/csv' });
@@ -175,8 +175,8 @@ const BatchTranslator: React.FC<BatchTranslatorProps> = ({ onTranslationComplete
                       {index + 1}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-[10px] text-slate-400 font-bold uppercase tracking-tight line-clamp-1">{translation.source}</p>
-                      <p className="text-sm text-slate-800 font-bold mt-0.5">{translation.translation}</p>
+                      <p className="text-[10px] text-slate-400 font-bold uppercase tracking-tight line-clamp-1">{translation.original_text}</p>
+                      <p className="text-sm text-slate-800 font-bold mt-0.5">{translation.translated_text}</p>
                     </div>
                   </div>
                 </div>

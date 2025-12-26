@@ -46,8 +46,8 @@ const SingleTranslator: React.FC<SingleTranslatorProps> = ({ onTranslationComple
   };
 
   const handleCopy = async () => {
-    if (translation?.translation) {
-      await navigator.clipboard.writeText(translation.translation);
+    if (translation?.translated_text) {
+      await navigator.clipboard.writeText(translation.translated_text);
       // You could add a toast notification here
     }
   };
@@ -196,16 +196,9 @@ const SingleTranslator: React.FC<SingleTranslatorProps> = ({ onTranslationComple
           <div className="relative group">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-primary-400 to-indigo-400 rounded-xl blur opacity-10 group-hover:opacity-20 transition duration-1000"></div>
             <div className="relative bg-white border border-slate-100 rounded-xl p-5 shadow-sm">
-              <p className="text-lg text-slate-800 font-bold leading-relaxed mb-4">
-                {translation.translation}
+              <p className="text-lg text-slate-800 font-bold leading-relaxed">
+                {translation.translated_text}
               </p>
-              
-              <div className="flex items-center gap-4 pt-4 border-t border-slate-50">
-                <div className="flex items-center gap-1.5">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary-400"></div>
-                  <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">{translation.model}</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>

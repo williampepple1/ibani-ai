@@ -72,12 +72,7 @@ function App() {
             <p className="text-slate-400 text-xs font-medium uppercase tracking-widest">
               Ibani Translator &bull; Empowering communication
             </p>
-            <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 bg-slate-100/50 rounded-full border border-slate-200/50">
-              <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">
-                Status: <span className="text-slate-700">localhost:8080</span>
-              </span>
-            </div>
+
           </div>
         </footer>
       </main>
