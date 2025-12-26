@@ -49,7 +49,7 @@ const StatusIndicator: React.FC = () => {
           <div className="flex-1">
             <p className="text-sm font-medium text-red-800">API Server Offline</p>
             <p className="text-xs text-red-600 mt-1">
-              Make sure to start the API server: <code className="bg-red-100 px-2 py-1 rounded">python api_server.py</code>
+              Unable to connect to the translation API. Please check your API endpoint configuration.
             </p>
           </div>
         </div>

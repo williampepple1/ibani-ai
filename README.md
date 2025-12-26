@@ -14,9 +14,10 @@ A modern, AI-powered translation web application for translating English to Iban
 - **Translation History**: Keep track of your translations with local storage
 - **Advanced Options**: Customize translation parameters (max_length, num_beams)
 - **Export to CSV**: Download batch translations as CSV files
-- **Real-time Status**: Monitor API server health and model status
+- **Real-time Status**: Monitor API connectivity and health
 - **Modern UI**: Beautiful, responsive interface with smooth animations
 - **TypeScript**: Full type safety throughout the application
+- **Framework Agnostic**: Frontend works with any backend API implementation
 
 ## 🚀 Quick Start
 
