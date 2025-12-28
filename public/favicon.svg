@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="crownGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer star circle -->
+  <g id="stars">
+    <circle cx="50" cy="50" r="48" fill="#e5e7eb"/>
+    <!-- Stars around the circle -->
+    <g fill="#1e3a8a">
+      <polygon points="50,8 51,11 54,11 52,13 53,16 50,14 47,16 48,13 46,11 49,11" transform="rotate(0 50 50)"/>
+      <polygon points="50,8 51,11 54,11 52,13 53,16 50,14 47,16 48,13 46,11 49,11" transform="rotate(22.5 50 50)"/>
+      <polygon points="50,8 51,11 54,11 52,13 53,16 50,14 47,16 48,13 46,11 49,11" transform="rotate(45 50 50)"/>
+      <polygon points="50,8 51,11 54,11 52,13 53,16 50,14 47,16 48,13 46,11 49,11" transform="rotate(67.5 50 50)"/>
+      <polygon points="50,8 51,11 54,11 52,13 53,16 50,14 47,16 48,13 46,11 49,11" transform="rotate(90 50 50)"/>
+      <polygon points="50,8 51,11 54,11 52,13 53,16 50,14 47,16 48,13 46,11 49,11" transform="rotate(112.5 50 50)"/>
+      <polygon points="50,8 51,11 54,11 52,13 53,16 50,14 47,16 48,13 46,11 49,11" transform="rotate(135 50 50)"/>
+      <polygon points="50,8 51,11 54,11 52,13 53,16 50,14 47,16 48,13 46,11 49,11" transform="rotate(157.5 50 50)"/>
+      <polygon points="50,8 51,11 54,11 52,13 53,16 50,14 47,16 48,13 46,11 49,11" transform="rotate(180 50 50)"/>
+      <polygon points="50,8 51,11 54,11 52,13 53,16 50,14 47,16 48,13 46,11 49,11" transform="rotate(202.5 50 50)"/>
+      <polygon points="50,8 51,11 54,11 52,13 53,16 50,14 47,16 48,13 46,11 49,11" transform="rotate(225 50 50)"/>
+      <polygon points="50,8 51,11 54,11 52,13 53,16 50,14 47,16 48,13 46,11 49,11" transform="rotate(247.5 50 50)"/>
+      <polygon points="50,8 51,11 54,11 52,13 53,16 50,14 47,16 48,13 46,11 49,11" transform="rotate(270 50 50)"/>
+      <polygon points="50,8 51,11 54,11 52,13 53,16 50,14 47,16 48,13 46,11 49,11" transform="rotate(292.5 50 50)"/>
+      <polygon points="50,8 51,11 54,11 52,13 53,16 50,14 47,16 48,13 46,11 49,11" transform="rotate(315 50 50)"/>
+      <polygon points="50,8 51,11 54,11 52,13 53,16 50,14 47,16 48,13 46,11 49,11" transform="rotate(337.5 50 50)"/>
+    </g>
+  </g>
+  
+  <!-- Blue circle background -->
+  <circle cx="50" cy="50" r="38" fill="url(#blueGrad)"/>
+  
+  <!-- Water waves -->
+  <g fill="none" stroke="#93c5fd" stroke-width="1.5" opacity="0.7">
+    <path d="M 15 65 Q 20 63 25 65 Q 30 67 35 65 Q 40 63 45 65 Q 50 67 55 65 Q 60 63 65 65 Q 70 67 75 65 Q 80 63 85 65"/>
+    <path d="M 15 69 Q 20 67 25 69 Q 30 71 35 69 Q 40 67 45 69 Q 50 71 55 69 Q 60 67 65 69 Q 70 71 75 69 Q 80 67 85 69"/>
+    <path d="M 15 73 Q 20 71 25 73 Q 30 75 35 73 Q 40 71 45 73 Q 50 75 55 73 Q 60 71 65 73 Q 70 75 75 73 Q 80 71 85 73"/>
+  </g>
+  
+  <!-- Flamingo body -->
+  <ellipse cx="35" cy="45" rx="10" ry="14" fill="#f8fafc" transform="rotate(-10 35 45)"/>
+  
+  <!-- Flamingo neck -->
+  <path d="M 32 32 Q 28 22 32 15" 
+        stroke="#f8fafc" stroke-width="4" fill="none" stroke-linecap="round"/>
+  
+  <!-- Flamingo head -->
+  <ellipse cx="32" cy="13" rx="3.5" ry="4" fill="#f8fafc"/>
+  
+  <!-- Flamingo beak -->
+  <path d="M 30 13 Q 26 12 24 13" 
+        stroke="#1e3a8a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M 30 14 Q 26 15 24 14" 
+        stroke="#1e3a8a" stroke-width="1" fill="none" stroke-linecap="round"/>
+  
+  <!-- Crown -->
+  <g transform="translate(32, 8)">
+    <!-- Crown base -->
+    <ellipse cx="0" cy="0" rx="5" ry="2" fill="url(#crownGrad)"/>
+    <!-- Crown points -->
+    <path d="M -4 -1 L -3 -5 L -2 -1 M -2 -1 L -1 -6 L 0 -1 M 0 -1 L 1 -6 L 2 -1 M 2 -1 L 3 -5 L 4 -1" 
+          fill="url(#crownGrad)" stroke="#f59e0b" stroke-width="0.5"/>
+    <!-- Crown jewels -->
+    <circle cx="-3" cy="-5" r="0.8" fill="#ef4444"/>
+    <circle cx="-1" cy="-6" r="1" fill="#3b82f6"/>
+    <circle cx="1" cy="-6" r="1" fill="#3b82f6"/>
+    <circle cx="3" cy="-5" r="0.8" fill="#ef4444"/>
+    <!-- Crown top ornament -->
+    <circle cx="0" cy="-7" r="1.2" fill="#fbbf24"/>
+    <path d="M -0.5 -8 L 0 -9.5 L 0.5 -8" fill="#f59e0b"/>
+  </g>
+  
+  <!-- Flamingo legs -->
+  <path d="M 32 58 L 32 70 M 32 70 L 30 70 M 32 70 L 34 70" 
+        stroke="#64748b" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M 38 58 L 40 68 M 40 68 L 38 68 M 40 68 L 42 68" 
+        stroke="#64748b" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <!-- Manilla Tree (right side) -->
+  <g transform="translate(68, 50)">
+    <!-- Tree top ornament -->
+    <circle cx="0" cy="-20" r="3" fill="#1e3a8a"/>
+    
+    <!-- Vertical pole -->
+    <rect x="-1" y="-20" width="2" height="30" fill="#1e3a8a"/>
+    
+    <!-- Horizontal branches (4 levels) -->
+    <g fill="#1e3a8a">
+      <!-- Top branch -->
+      <path d="M -8 -14 Q -6 -13 -2 -13 L -2 -15 L 2 -15 L 2 -13 Q 6 -13 8 -14"/>
+      <!-- Second branch -->
+      <path d="M -8 -7 Q -6 -6 -2 -6 L -2 -8 L 2 -8 L 2 -6 Q 6 -6 8 -7"/>
+      <!-- Third branch -->
+      <path d="M -8 0 Q -6 1 -2 1 L -2 -1 L 2 -1 L 2 1 Q 6 1 8 0"/>
+      <!-- Bottom branch -->
+      <path d="M -8 7 Q -6 8 -2 8 L -2 6 L 2 6 L 2 8 Q 6 8 8 7"/>
+    </g>
+    
+    <!-- Tree base/roots -->
+    <path d="M -6 10 Q -4 12 0 13 Q 4 12 6 10 M -4 10 L -6 15 M 0 13 L 0 15 M 4 10 L 6 15" 
+          stroke="#1e3a8a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>
