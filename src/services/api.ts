@@ -5,6 +5,7 @@ import type {
   TranslationResponse,
   BatchTranslationResponse,
   HealthResponse,
+  DictionaryEntry,
 } from '../types';
 
 // Get API base URL from environment variable or use default
@@ -36,7 +37,19 @@ export const translationApi = {
     const response = await api.post<BatchTranslationResponse>('/api/batch-translate', request);
     return response.data;
   },
+
+  // Dictionary search
+  searchDictionary: async (word: string): Promise<DictionaryEntry[]> => {
+    try {
+      const response = await axios.get<DictionaryEntry[]>(
+        `https://ibani-dictionary-git-main-williampepple1s-projects.vercel.app/search?word=${encodeURIComponent(word)}`
+      );
+      return response.data;
+    } catch (error) {
+      console.error('Dictionary search error:', error);
+      throw error;
+    }
+  },
 };
 
 export default api;
-

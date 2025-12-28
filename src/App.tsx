@@ -3,10 +3,11 @@ import Header from './components/Header';
 
 import SingleTranslator from './components/SingleTranslator';
 import BatchTranslator from './components/BatchTranslator';
+import Dictionary from './components/Dictionary';
 
 import type { TranslationResponse } from './types';
 
-type TabType = 'single' | 'batch';
+type TabType = 'single' | 'batch' | 'dictionary';
 
 function App() {
   const [activeTab, setActiveTab] = useState<TabType>('single');
@@ -38,6 +39,7 @@ function App() {
               </svg>
               <span>Single</span>
             </button>
+
             <button
               onClick={() => setActiveTab('batch')}
               className={`tab-button ${
@@ -48,6 +50,17 @@ function App() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
               </svg>
               <span>Batch</span>
+            </button>
+            <button
+              onClick={() => setActiveTab('dictionary')}
+              className={`tab-button ${
+                activeTab === 'dictionary' ? 'tab-button-active' : 'tab-button-inactive'
+              }`}
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+              <span>Dictionary</span>
             </button>
           </div>
         </div>
@@ -62,6 +75,11 @@ function App() {
           {activeTab === 'batch' && (
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
               <BatchTranslator onTranslationComplete={handleBatchTranslationComplete} />
+            </div>
+          )}
+          {activeTab === 'dictionary' && (
+            <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+              <Dictionary />
             </div>
           )}
         </div>

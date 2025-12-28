@@ -36,3 +36,14 @@ export interface TranslationHistoryItem {
   timestamp: Date;
 }
 
+// Dictionary types
+export interface DictionaryEntry {
+  Ibani: string;
+  Pos: string;
+  Meaning: string;
+}
+
+export interface DictionarySearchResponse {
+  results: DictionaryEntry[];
+  count: number;
+}
