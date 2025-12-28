@@ -2,18 +2,18 @@ import React from 'react';
 
 const Header: React.FC = () => {
   return (
-    <header className="py-8 relative overflow-hidden">
-      <div className="container mx-auto px-4 relative z-10">
+    <header className="py-6 sm:py-8 relative overflow-hidden">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center text-center">
-          <div className="w-12 h-12 premium-gradient rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-primary-500/20 animate-float">
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="w-10 h-10 sm:w-12 sm:h-12 premium-gradient rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4 shadow-lg shadow-primary-500/20 animate-float">
+            <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
             </svg>
           </div>
-          <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight mb-2">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-2">
             Ibani <span className="text-transparent bg-clip-text premium-gradient">Translator</span>
           </h1>
-          <p className="text-slate-500 text-sm max-w-md font-medium leading-relaxed">
+          <p className="text-slate-500 text-xs sm:text-sm max-w-md font-medium leading-relaxed px-4">
             Seamless English to Ibani translation powered by high-precision neural models.
           </p>
         </div>

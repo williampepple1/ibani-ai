@@ -54,14 +54,14 @@ const SingleTranslator: React.FC<SingleTranslatorProps> = ({ onTranslationComple
 
   return (
     <div className="glass-card">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 sm:mb-6">
         <div>
-          <h2 className="text-xl font-bold text-slate-900 mb-1">Single Translation</h2>
-          <p className="text-slate-500 text-xs font-semibold">Deep contextual English to Ibani rendering</p>
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-1">Single Translation</h2>
+          <p className="text-slate-500 text-[11px] sm:text-xs font-semibold">Deep contextual English to Ibani rendering</p>
         </div>
         <button
           onClick={() => setShowAdvanced(!showAdvanced)}
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider text-primary-600 bg-primary-50 hover:bg-primary-100 transition-all duration-300"
+          className="flex items-center gap-1.5 px-3 py-2 sm:py-1.5 rounded-lg text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-primary-600 bg-primary-50 hover:bg-primary-100 transition-all duration-300 min-h-[44px] sm:min-h-0"
         >
           <svg className={`w-3.5 h-3.5 transition-transform duration-300 ${showAdvanced ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -72,8 +72,8 @@ const SingleTranslator: React.FC<SingleTranslatorProps> = ({ onTranslationComple
 
       {/* Advanced Options */}
       {showAdvanced && (
-        <div className="mb-6 p-4 bg-slate-50/50 rounded-xl border border-slate-200/50 space-y-4 animate-in fade-in slide-in-from-top-2 duration-500">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-slate-50/50 rounded-xl border border-slate-200/50 space-y-3 sm:space-y-4 animate-in fade-in slide-in-from-top-2 duration-500">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
             <div className="space-y-2">
               <div className="flex justify-between items-center">
                 <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Max Length</label>
@@ -108,8 +108,8 @@ const SingleTranslator: React.FC<SingleTranslatorProps> = ({ onTranslationComple
       )}
 
       {/* Input Section */}
-      <div className="mb-6 group">
-        <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2 ml-1 group-focus-within:text-primary-600 transition-colors duration-300">
+      <div className="mb-4 sm:mb-6 group">
+        <label className="block text-[10px] sm:text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-2 ml-1 group-focus-within:text-primary-600 transition-colors duration-300">
           Source Text
         </label>
         <div className="relative">
@@ -117,11 +117,11 @@ const SingleTranslator: React.FC<SingleTranslatorProps> = ({ onTranslationComple
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
             placeholder="Type your text here..."
-            className="input-premium min-h-[120px] resize-none pb-10"
+            className="input-premium min-h-[100px] sm:min-h-[120px] resize-none pb-10 text-sm sm:text-base"
             disabled={loading}
           />
-          <div className="absolute bottom-3 right-4 flex items-center gap-2">
-            <span className="text-[10px] font-bold text-slate-300">
+          <div className="absolute bottom-3 right-3 sm:right-4 flex items-center gap-2">
+            <span className="text-[9px] sm:text-[10px] font-bold text-slate-300">
               {inputText.length} characters
             </span>
           </div>
@@ -129,33 +129,33 @@ const SingleTranslator: React.FC<SingleTranslatorProps> = ({ onTranslationComple
       </div>
 
       {/* Action Buttons */}
-      <div className="flex gap-3 mb-8">
+      <div className="flex gap-2 sm:gap-3 mb-6 sm:mb-8">
         <button
           onClick={handleTranslate}
           disabled={loading || !inputText.trim()}
-          className="btn-premium flex-1 flex items-center justify-center gap-2 py-3"
+          className="btn-premium flex-1 flex items-center justify-center gap-2"
         >
           {loading ? (
             <>
               <div className="animate-spin rounded-full h-4 w-4 border-2 border-white/30 border-t-white"></div>
-              <span className="tracking-widest uppercase text-xs">Processing...</span>
+              <span className="tracking-widest uppercase text-[10px] sm:text-xs">Processing...</span>
             </>
           ) : (
             <>
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
-              <span className="tracking-widest uppercase text-xs">Translate</span>
+              <span className="tracking-widest uppercase text-[10px] sm:text-xs">Translate</span>
             </>
           )}
         </button>
         <button
           onClick={handleClear}
           disabled={loading || !inputText}
-          className="btn-premium-outline px-4"
+          className="btn-premium-outline px-3 sm:px-4"
           title="Clear"
         >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
           </svg>
         </button>
@@ -180,12 +180,12 @@ const SingleTranslator: React.FC<SingleTranslatorProps> = ({ onTranslationComple
       {translation && (
         <div className="animate-in fade-in slide-in-from-bottom-6 duration-700">
           <div className="flex items-center justify-between mb-3 ml-1">
-            <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+            <label className="text-[10px] sm:text-[11px] font-bold text-slate-400 uppercase tracking-widest">
               Ibani Rendering
             </label>
             <button
               onClick={handleCopy}
-              className="text-[10px] font-bold text-primary-600 hover:text-primary-700 flex items-center gap-1.5 px-2 py-1 bg-primary-50 rounded-md transition-colors duration-300"
+              className="text-[10px] sm:text-[11px] font-bold text-primary-600 hover:text-primary-700 flex items-center gap-1.5 px-2 sm:px-3 py-1.5 sm:py-1 bg-primary-50 rounded-md transition-colors duration-300 min-h-[36px] sm:min-h-0"
             >
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -195,8 +195,8 @@ const SingleTranslator: React.FC<SingleTranslatorProps> = ({ onTranslationComple
           </div>
           <div className="relative group">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-primary-400 to-indigo-400 rounded-xl blur opacity-10 group-hover:opacity-20 transition duration-1000"></div>
-            <div className="relative bg-white border border-slate-100 rounded-xl p-5 shadow-sm">
-              <p className="text-lg text-slate-800 font-bold leading-relaxed">
+            <div className="relative bg-white border border-slate-100 rounded-lg sm:rounded-xl p-4 sm:p-5 shadow-sm">
+              <p className="text-base sm:text-lg text-slate-800 font-bold leading-relaxed">
                 {translation.translated_text}
               </p>
             </div>
