@@ -27,7 +27,7 @@ function App() {
       <main className="container mx-auto px-3 sm:px-4 md:px-6 pb-8 sm:pb-12 relative z-10">
         {/* Tab Navigation */}
         <div className="flex justify-center mb-6 sm:mb-8">
-          <div className="bg-slate-200/50 backdrop-blur-md p-1 rounded-xl flex gap-1 w-full sm:w-auto overflow-x-auto">
+          <div className="bg-slate-200/50 backdrop-blur-md p-1 rounded-xl flex gap-1 justify-center w-full sm:w-auto">
             <button
               onClick={() => setActiveTab('single')}
               className={`tab-button ${
